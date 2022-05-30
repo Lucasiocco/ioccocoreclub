@@ -1,0 +1,15 @@
+.navigation {
+background-color: dimgray;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.brand a {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+}
+
