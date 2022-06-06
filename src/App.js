@@ -1,9 +1,14 @@
-import NavBar from './components/NavBar';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+
 
 const App = () => {
     return (
       <>
-      <NavBar/>
+      <Header/>
+      <Main/>
+      <Footer/>
       </> 
     )
   };

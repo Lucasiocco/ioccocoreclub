@@ -2,4 +2,7 @@
     justify-content: space-around;
 }
 
-
+.material-symbols-outlined {
+    color: #fff;
+    border-color: #000;
+}
