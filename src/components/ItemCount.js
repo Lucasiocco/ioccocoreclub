@@ -18,10 +18,10 @@ const confirmarContador = () => {
 
   return (
     <div>
-    <p>El contador va: {count}</p>
-    <button onClick={aumentarContador}>Sumar</button>
-    <button onClick={bajarContador}>Restar</button>
-    <button onClick={confirmarContador}>Confirmar</button>
+    <button className="btn btn-primary" onClick={aumentarContador}>Sumar</button>
+    <button className="btn btn-primary" onClick={bajarContador}>Restar</button>
+    <p>{count}</p>
+    <button className="btn btn-primary" onClick={confirmarContador}>Confirmar</button>
     </div>
   )
 }

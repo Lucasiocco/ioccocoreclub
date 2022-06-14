@@ -1,0 +1,24 @@
+[ 
+    {
+        "title" : "Plan x8",
+        "id" : "1",
+        "price" : 4500,
+        "pictureUrl" : "",
+        "description" : "ASDASD"
+    },
+    {
+        "title" : "Plan x4",
+        "id" : "2",
+        "price" : 3500,
+        "pictureUrl" : "",
+        "description" : "ASDASD"
+    },
+    {
+        "title" : "Plan On",
+        "id" : "3",
+        "price" : 2500,
+        "pictureUrl" : "",
+        "description" : "ASDASD"
+    }
+]
+

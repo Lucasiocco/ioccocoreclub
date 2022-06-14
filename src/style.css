@@ -6,3 +6,32 @@
     color: #fff;
     border-color: #000;
 }
+
+.btn {
+   margin: 1px;
+}
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    margin: 2px;
+}
+.nav-item a:hover {
+    color: rgb(255, 239, 59);
+    text-decoration: none;
+}
+
+
+.nav-link {
+    color: #fff;
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.d-flex {
+    background-color: #212529;
+}

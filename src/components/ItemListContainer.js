@@ -1,18 +1,28 @@
 import { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
+import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
 
 const ItemListContainer = (props) => {
 
     const [items, setItems] = useState([]);
+    const resultado = useParams
 
   useEffect(() => {
+
+    const MocAsync = new Promise((resolve) => {
+
       setTimeout(() => {
-          console.log("Cargando items");
+          console.log("Cargando productos");
           const productos = ["Producto 1", "Producto 2", "Producto 3"];
-          setItems (productos);
-      },3000)
-  })
-   
+          resolve(productos);
+        },3000)
+    })
+
+        MocAsync.then(productos => {
+            setItems(productos)
+            });
+    
+    }, []);
 
     const onAdd = () => {}
 
@@ -20,7 +30,7 @@ const ItemListContainer = (props) => {
         return (
             <div>
                 <h1>{props.greeting}</h1>
-                <ItemCount stock={items} initial={0} onAdd={onAdd} />
+                <ItemList/>
             </div>
         )
     } else { 
@@ -32,5 +42,6 @@ const ItemListContainer = (props) => {
         )
     }
 }
+
 
 export default ItemListContainer
