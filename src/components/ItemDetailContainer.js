@@ -1,17 +1,21 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import productos from "../utils/productos";
+import customFetch from "../utils/customFetch";
 
 const ItemDetailContainer = () => {
   
-    const [item, setItem] = useState(null);
+    const [item, setItem] = useState({});
+    const params = useParams
 
   useEffect (() => {
-    
+    customFetch(2000, productos)
+        .then(resultado => setItem(resultado))
   })
   
     return (
-    <div>ItemDetailContainer</div>
+    <ItemDetail item={item} />
   )
 }
 

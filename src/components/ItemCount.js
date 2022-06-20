@@ -12,8 +12,10 @@ const bajarContador = () => {
     setCount(count - 1);
 }
 
-const confirmarContador = () => {
+const confirmarContador = (e) => {
+    console.log(`Confirmando el contador: ${count}`);
     onAdd(count);
+    return count;
 }
 
   return (
@@ -21,7 +23,7 @@ const confirmarContador = () => {
     <button className="btn btn-primary" onClick={aumentarContador}>Sumar</button>
     <button className="btn btn-primary" onClick={bajarContador}>Restar</button>
     <p>{count}</p>
-    <button className="btn btn-primary" onClick={confirmarContador}>Confirmar</button>
+    <button className="btn btn-primary" onClick={confirmarContador()}>Confirmar</button>
     </div>
   )
 }
