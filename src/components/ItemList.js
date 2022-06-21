@@ -1,17 +1,18 @@
 import React from 'react';
 import Item from './Item';
 
-function ItemList({productos}) {
+
+const ItemList = ({ productos }) =>{
 
     return (
-      productos.map(p => 
-        <Item 
-        id={p.id}
-        name={p.name} 
-        image={p.image}
-        key={p.id} 
-        />
-    )
+        <section className="item-list">
+            {productos.map(producto => 
+                <Item 
+                key={producto.id} 
+                producto={producto} 
+                />
+            )}
+        </section>
     )
 }
 

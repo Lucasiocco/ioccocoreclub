@@ -1,21 +1,25 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import productos from "../utils/productos";
-import customFetch from "../utils/customFetch";
+import { getProductos } from "../utils/productos";
 
 const ItemDetailContainer = () => {
   
-    const [item, setItem] = useState({});
+    const [producto, setItem] = useState({});
     const params = useParams
 
   useEffect (() => {
-    customFetch(2000, productos)
-        .then(resultado => setItem(resultado))
+    getProductos()
+        .then((resultado) => {
+            setItem(resultado);
   })
+  .catch((error) => { 
+    console.log(error); 
+  });
+  }, []);
   
     return (
-    <ItemDetail item={item} />
+    <ItemDetail productos={producto} />
   )
 }
 

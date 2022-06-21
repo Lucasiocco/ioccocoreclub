@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
-import customFetch from "../utils/customFetch";
 import ItemList from "./ItemList";
-import productos from "../utils/productos";
+import { getProductos } from "../utils/productos";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer() {
+const ItemListContainer = () => {
 
-    const [items, setItems] = useState([]);
+    const [ productos, setItems] = useState([]);
+    const params = useParams()
+    console.log(params);
 
   useEffect(() => {
-    customFetch(3000, productos)
-        .then(resultado => setItems(resultado))
-    }, [items]);
+    getProductos()
+        .then((resultado) => {
+            setItems(resultado);
+    }) .catch((error) => { console.log(error); });
+
+    }, []);
 
     return (
         <div>
-            <ItemList productos={items} />
+            <h1>Estas a un click de cambiar tu vida!</h1>
+            <ItemList productos={productos} />
         </div>
     )
 }
