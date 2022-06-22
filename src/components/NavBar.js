@@ -13,13 +13,13 @@ const NavBar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-        <Link to="/Inicio">{"Inicio"}</Link>
+        <Link to="/">{"Inicio"}</Link>
         </li>
         <li className="nav-item">
-        <Link to="/Nosotros">{"Nosotros"}</Link>
+        <Link to="/category/Nosotros">{"Nosotros"}</Link>
         </li>
         <li className="nav-item">
-        <Link to="/Tienda">{"Tienda"}</Link>
+        <Link to="/category/Tienda">{"Tienda"}</Link>
         </li>
       </ul>
       <CartWidget />

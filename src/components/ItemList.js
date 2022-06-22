@@ -3,16 +3,16 @@ import Item from './Item';
 
 
 const ItemList = ({ productos }) =>{
-
     return (
-        <section className="item-list">
-            {productos.map(producto => 
-                <Item 
-                key={producto.id} 
-                producto={producto} 
-                />
-            )}
-        </section>
+    productos.map(producto => 
+        <Item 
+            key={producto.id}
+            id={producto.id}
+            name={producto.name}
+            image={producto.image}
+            description={producto.description}
+            price={producto.price}
+        />)
     )
 }
 
