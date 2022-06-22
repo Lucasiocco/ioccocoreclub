@@ -9,10 +9,9 @@ const App = () => {
       <BrowserRouter>
         <Header/>
         <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/category/:category" element={<ItemListContainer />} />
-       </Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
         <Footer/>
       </BrowserRouter>
     );

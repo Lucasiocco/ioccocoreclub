@@ -1,32 +1,25 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import {getProductosByCategory} from "../utils/productos";
-import { customFetch } from "../utils/customFetch";
 import { useParams } from "react-router-dom";
+import { customFetch, getProductosByCategory } from "../utils/customFetch";
 
 const ItemListContainer = () => {
 
     const [ productos, setItems] = useState([]);
-    const {category} = useParams();
+    const { category } = useParams();
+
 
   useEffect(() => {
-    if(!category) {
-        customFetch("productos")
-            .then(response => {
-                setItems(response)
-            })
-        } else {
-            getProductosByCategory(category)
-                .then(response => {
-                    setItems(response)
-                })
-        }
-    }, [category]);
+    if (category) {
+        customFetch(3000, getProductosByCategory(category))
+        .then(response => setItems(response))}
+    else { customFetch()}
+    }, [productos]);
 
     return (
         <div className="container">
-            <h1 className="tittle">Estas a un click de cambiar tu vida!</h1>
-            <ItemList productos={productos} />
+           <h1 className="tittle">Estas a un click de cambiar tu vida!</h1>
+          { productos?.length < 0 ? <p>No existe</p> : <ItemList productos={productos}/> }
         </div>
     )
 }

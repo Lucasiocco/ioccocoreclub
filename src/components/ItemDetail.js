@@ -1,23 +1,16 @@
-import { useState } from 'react';
+import React from 'react';
 import ItemCount from './ItemCount';
 
-const ItemDetail = ({producto}) => {
-
-  const [ cant, setCant ] = useState(true);
-  console.log(cant);
-
-  const onAdd = (cantidadSeleccionada) => {
-    console.log('Desde Item Detail' + cantidadSeleccionada);
-  }
+const ItemDetail = ({name, id, description, price, image}) => {
 
   return (
 
     <div className="item-detail">
-      <h2>{producto.name}</h2>
-      <img src={producto.img} alt="foto" />
-      <p>{producto.description}</p>
-      <p>{producto.price}</p>
-      <ItemCount initial={1} onAdd={onAdd}/>
+      <h2>{name}</h2>
+      <img src={image} alt={id} />
+      <p>{description}</p>
+      <h3>${price}</h3>
+      <ItemCount initial={1}/>
     </div>
 
   )

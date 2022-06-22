@@ -6,7 +6,7 @@ const NavBar = () => {
       <>
     <nav className="navbar navbar-expand-lg bg-dark">
   <div className="container-fluid">
-    <img className="imgLogo" src="./img/TheCoreClub.png" alt=""/>
+    <img className="imgLogo" src="../img/TheCoreClub.png" alt=""/>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -16,10 +16,10 @@ const NavBar = () => {
         <Link to="/">{"Inicio"}</Link>
         </li>
         <li className="nav-item">
-        <Link to="/category/Nosotros">{"Nosotros"}</Link>
+        <Link to="/">{"Nosotros"}</Link>
         </li>
         <li className="nav-item">
-        <Link to="/category/Tienda">{"Tienda"}</Link>
+        <Link to="/">{"Tienda"}</Link>
         </li>
       </ul>
       <CartWidget />
