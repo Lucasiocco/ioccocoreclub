@@ -13,13 +13,21 @@ const ItemDetailContainer = () => {
         .then(response => {
             setItem(response)})
         }, [id]);
-  
+
+    if (producto !== {}) {
+
     return (
         <div className="container">
             <h1>Detalle del Producto</h1>
-            <ItemDetail {... producto}/>
+            <ItemDetail {...producto}/>
         </div>
   )
+    }
+  else {
+    return (
+        <h3>Cargando...</h3>
+    )
+  }
 }
 
 export default ItemDetailContainer
