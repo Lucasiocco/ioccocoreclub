@@ -1,33 +1,37 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import { getProductosById } from "../utils/customFetch";
+import { productos } from "./productos";
 import { useParams } from "react-router-dom";
+import { SkeletonCard } from "./ProductLoader"
 
 const ItemDetailContainer = () => {
   
     const [producto, setItem] = useState({});
+    const [loading, setLoading] = useState(true)
     const {id} = useParams()
 
-  useEffect (() => {
-    getProductosById(parseInt(id))
-        .then(response => {
-            setItem(response)})
-        }, [id]);
+    useEffect(() => {
 
-    if (producto !== {}) {
-
+      setLoading(true)
+  
+      new Promise((res, rej) => {
+        setTimeout(() => {
+          res(productos.find(productos => productos.id == id))
+        }, 2000)
+      })
+        .then(respuesta => {
+          setLoading(false)
+          setItem(respuesta)
+        })
+  
+    },[])
+  
+  
     return (
-        <div className="container">
-            <h1>Detalle del Producto</h1>
-            <ItemDetail {...producto}/>
-        </div>
-  )
-    }
-  else {
-    return (
-        <h3>Cargando...</h3>
+      <>
+        {loading? <SkeletonCard/> : <ItemDetail producto={producto} />}
+      </>
     )
-  }
 }
 
 export default ItemDetailContainer

@@ -2,14 +2,19 @@ import React from 'react';
 import Item from './Item';
 
 
-function ItemList({productos}) {
+const ItemList = ({productos}) => {
     return (
-      productos.map(p =>
+        <div className="itemList">
+      {productos.map(producto => (
           <Item
-          key={p.id}
-          {...p}
+          key={producto.id}
+          id={producto.id}
+          name={producto.name}
+          image={producto.image}
           />
-          )
+      ))
+      }
+        </div>
     )
   }
 

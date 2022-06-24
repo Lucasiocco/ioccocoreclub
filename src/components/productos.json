@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "name": "Plan X3",
+      "price": 4500,
+      "category": "Planes",
+      "description": "Lorem ipsum dolor sit amet"
+    },
+    {
+        "id": 2,
+        "name": "Plan X2",
+        "price": 3500,
+        "category": "Planes",
+        "description": "Lorem ipsum dolor sit amet" 
+    },
+    {
+        "id": 3,
+        "name": "Plan On",
+        "price": 2500,
+        "category": "Planes",
+        "description": "Lorem ipsum dolor sit amet"    
+    },
+    {
+        "id": 4,
+        "name": "Proteina",
+        "price": 4500,
+        "category": "Suplementos",
+        "description": "Lorem ipsum dolor sit amet"    
+    },
+    {
+        "id": 4,
+        "name": "Creatina",
+        "price": 4500,
+        "category": "Suplementos",
+        "description": "Lorem ipsum dolor sit amet"    
+    }
+  ]

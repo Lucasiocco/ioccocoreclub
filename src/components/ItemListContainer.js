@@ -1,48 +1,46 @@
-import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
-import { productos } from "../utils/productos";
-import { useParams } from "react-router-dom";
-import { customFetch, getProductosByCategory } from "../utils/customFetch";
+import { useEffect, useState } from "react"
+import { productos } from "./productos"
+import ItemList from "./ItemList"
+import { useParams } from "react-router-dom"
+import { ProductLoader } from "./ProductLoader"
 
 const ItemListContainer = () => {
 
     const [ productos, setItems] = useState([]);
+    const [loading, setLoading] = useState(true)
     const { category } = useParams();
 
 
-  useEffect(() => {
-    if (!category) {
-        customFetch(productos)
-        .then(response => {
-          setItems(response)
-          });
-        }
-    else { 
-      getProductosByCategory(category)
-    .then(response => {
-      setItems(response)
-  });
-  }
-  }, [category]);
-
-  if (productos.length > 0) {
-
+    useEffect(() => {
+    
+      setLoading(true)
+  
+      new Promise((res, rej) => {
+        setTimeout(() => {
+          res(category ? productos.filter((producto) => {
+            return producto.category == category
+          }) : productos)
+        }, 2000)
+      })
+        .then(resultado => {
+          setItems(resultado)
+          setLoading(false)
+        })
+        .catch(() => {
+          //setItems([])
+        })
+  
+    }, [category])
+  
+  
+  
     return (
-        <div className="catalogo">
-          {category ? "" : <h1>Home</h1>}
-           <h2>Estas a un click de cambiar tu vida!</h2>
-          <ItemList items={productos} />
-        </div>
-    );
-
-  }
-  else {
-    return (
-            <h3>Cargando...</h3>
-    );
+      <>
+        {loading ? <ProductLoader /> : <ItemList productos={productos} />}
+      </>
+    )
   }
 
-}
 
 
 export default ItemListContainer
