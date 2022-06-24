@@ -6,7 +6,7 @@ import { SkeletonCard } from "./ProductLoader"
 
 const ItemDetailContainer = () => {
   
-    const [producto, setItem] = useState({});
+    const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true)
     const {id} = useParams()
 
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
   
     return (
       <>
-        {loading? <SkeletonCard/> : <ItemDetail producto={producto} />}
+        {loading? <SkeletonCard/> : <ItemDetail item={item} />}
       </>
     )
 }

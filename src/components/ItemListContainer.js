@@ -6,10 +6,9 @@ import { ProductLoader } from "./ProductLoader"
 
 const ItemListContainer = () => {
 
-    const [ productos, setItems] = useState([]);
+    const [ items , setItems] = useState([]);
     const [loading, setLoading] = useState(true)
     const { category } = useParams();
-
 
     useEffect(() => {
     
@@ -27,16 +26,17 @@ const ItemListContainer = () => {
           setLoading(false)
         })
         .catch(() => {
-          //setItems([])
+          setItems([])
         })
   
     }, [category])
+
   
   
   
     return (
       <>
-        {loading ? <ProductLoader /> : <ItemList productos={productos} />}
+        {loading ? <ProductLoader /> : <ItemList items={items} />}
       </>
     )
   }
