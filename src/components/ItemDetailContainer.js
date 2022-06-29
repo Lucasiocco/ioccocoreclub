@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
       new Promise((res, rej) => {
         setTimeout(() => {
           res(productos.find(productos => productos.id == id))
-        }, 2000)
+        }, )
       })
         .then(respuesta => {
           setLoading(false)

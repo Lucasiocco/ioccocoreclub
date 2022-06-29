@@ -3,7 +3,8 @@ export const productos = [
     id: 1,
     name: 'Plan X3',
     image: '../img/TheCoreClub.png',
-    price: '$4500',
+    price: 4500,
+    stock: 50,
     category: 'Planes',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
@@ -11,7 +12,8 @@ export const productos = [
     id: 2,
     name: 'Plan X2',
     image: '../img/TheCoreClub.png',
-    price: '$3500',
+    price: 3500,
+    stock: 50,
     category: 'Planes',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
@@ -19,23 +21,26 @@ export const productos = [
     id: 3,
     name: 'Plan ON',
     image: '../img/TheCoreClub.png',
-    price: '$2500',
+    price: 2500,
+    stock: 50,
     category: 'Planes',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
     id: 4,
     name: 'Proteina',
-    image: '../img/TheCoreClub.png',
-    price: '$3500',
+    image: '../img/proteina_gold_nutrition.png',
+    price: 3500,
+    stock: 10,
     category: 'Suplementos',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
     id: 5,
     name: 'Creatina',
-    image: '../img/TheCoreClub.png',
-    price: '$3500',
+    image: '../img/creatina_gold_nutrition.png',
+    price: 2500,
+    stock: 10,
     category: 'Suplementos',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }

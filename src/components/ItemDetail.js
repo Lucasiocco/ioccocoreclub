@@ -1,13 +1,18 @@
 import React from 'react';
 import ItemCount from './ItemCount';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { CartContext } from './Provider';
+import { Link }from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
 
-  const [cant, setCant] = useState(true)
+  const[ocultarConfirmar, setocultarConfirmar] = useState(false)
 
-  const onAdd = (cantidadSeleccionada) => {
-    setCant(cantidadSeleccionada)
+  const { addItem } = useContext(CartContext)
+
+  const addToCart = (quantity) => {
+    addItem(item, quantity)
+    setocultarConfirmar (true)
   }
 
   return (
@@ -15,9 +20,11 @@ const ItemDetail = ({item}) => {
     <div className="item-detail">
       <h4>{item.name}</h4>
       <img src={item.image} alt={item.id} />
-      <p>{item.description}</p>
+      <p className="p-detail">{item.description}</p>
       <h5>{item.price}</h5>
-      <ItemCount initial={1} onAdd={onAdd}/>
+      <div>
+      {ocultarConfirmar ? (<Link to={"/carrito"}>Finalizar la compra</Link>) : (<ItemCount initial={0} onAdd={addToCart}/>)}
+      </div>
     </div>
 
   )
