@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
         </section>
         <section class="sec2">
-            <h1>"La victoria es algo que se construye física y psicológicamente cada día que se entrena y cada noche que se sueña" - Emmitt Smith.</h1>
+            <h2>"La victoria es algo que se construye física y psicológicamente cada día que se entrena y cada noche que se sueña" - <b>Emmitt Smith.</b></h2>
         </section>
         </div>
   )

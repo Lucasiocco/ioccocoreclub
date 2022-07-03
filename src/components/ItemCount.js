@@ -43,7 +43,7 @@ const confirmarContador = ()=>{
     <button className="btn btn-primary" onClick={bajarContador}>Restar</button>
     <p className="p-count">{count}</p>
     <div>
-      <button className="btn btn-primary" onClick={confirmarContador}>Confirmar</button>: <></>
+      <button className="btn btn-primary" onClick={confirmarContador}>Confirmar</button>
     </div>
     </div>
   )

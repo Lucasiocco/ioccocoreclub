@@ -13,9 +13,14 @@ const Nosotros = () => {
                         </div>
                         <div class="flip-card-back">
                             <h1>Nina</h1>
-                            <p>Profesora Nacional de Edudacion Fisica</p>
+                            <a class="flip-card-image" href=""><img src="../img/instagram.png" alt="" /></a>
+                            <a class="flip-card-image" href=""><img src="../img/whatsapp.png" alt="" /></a>
+                            <div class="flip-card-text">
+                            <p>Profesora Nacional de Edudacion Fisica.</p>
                             <p>Entrenadora de gimnasia artistica en "Racing Club sede villa del parque".</p>
                             <p>Entrenadora de acrobacia en "Doble Salto".</p>
+                            <p>Coach en "Megatlon Martinez."</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -28,9 +33,14 @@ const Nosotros = () => {
                         </div>
                         <div class="flip-card-back">
                             <h1>Lucas</h1>
-                            <p>Profesor Nacional de Edudacion Fisica</p>
-                            <p>Jugador de futsal en "Villa Mitre".</p>
+                            <a class="flip-card-image" href=""><img src="../img/instagram.png" alt="" /></a>
+                            <a class="flip-card-image" href=""><img src="../img/whatsapp.png" alt="" /></a>
+                            <div class="flip-card-text">
+                            <p>Profesor Nacional de Edudacion Fisica.</p>
                             <p>Preparador Fisico.</p>
+                            <p>Coach en "Mega Gimnasio Devoto.</p>
+                            <p>Jugador de futsal en "Villa Mitre".</p>
+                            </div>
                         </div>
                     </div>
                 </div>

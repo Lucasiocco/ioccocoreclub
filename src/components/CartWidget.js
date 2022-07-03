@@ -4,13 +4,12 @@ import { CartContext } from './Provider'
 
 const CartWidget = () => {
 
-  const resultado = useContext(CartContext)
-  console.log(resultado)
-
+  const { addItemNavBar } = useContext(CartContext)
+  
   return (
       <>
        <NavLink to="/carrito" className="material-symbols-outlined">
-        shopping_cart {resultado.cantidad_total}
+        shopping_cart<span className="badge badge-light">{addItemNavBar}</span>
        </NavLink>
   </>
   )

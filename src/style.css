@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+}
+h4 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 5rem;
+}
+
 /* NavBar */
 
 .navbar-collapse {
@@ -108,17 +119,22 @@
     transition: all 0.3s ease;
 }
 
-h4 {
-    font-family: 'Bangers', cursive;
-    font-size: 100px;
-}
-
 .p-detail {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
     color: black;
-    padding: 5rem;
+    margin: 20px 150px;
 }
+.img-detail {
+    width: 80%;
+    height: auto;
+}
+
+.img-itemDetail{
+    width: 15%;
+    height: auto;
+}
+
 
 /* COUNT */
 
@@ -129,22 +145,19 @@ h4 {
     align-items: center;
     width: 100%;
     min-width: 250px;
-    margin: 1rem;
     transition: all 0.3s ease;
 }
 
 .p-count {
     text-align: center;
     font-weight: bold;
-
 }
 
-/* Hero */
 
 /* Main */
 
 .bienvenida {
-    font-family: 'Bangers', cursive;
+    font-family: 'Russo One', sans-serif;
     font-size: 100px;
     margin-top: 150px;
     text-align: center;
@@ -157,8 +170,9 @@ h4 {
 }
 
 .texto1 {
+    font-family: 'Space Mono', monospace;
     font-size: 2rem;
-    padding: 50px;
+    padding: 100px;
 }
 
 .video1 {
@@ -167,6 +181,7 @@ h4 {
 }
 .video1 img {
     width: 400px;
+    margin-right: 100px;
 }
 
 .sec2 {
@@ -183,8 +198,10 @@ h4 {
     margin: 100px 50px;
 }
 .paginaNosotros h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .containerNos {  display: grid;
@@ -212,6 +229,16 @@ h4 {
     height: 694px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
+}
+
+.flip-card-image {
+    margin: 2px;
+}
+
+.flip-card-text{
+    margin-top: 100px;
+    padding: 20px;
+    text-align: left;
 }
 
 .flip-card-inner {
