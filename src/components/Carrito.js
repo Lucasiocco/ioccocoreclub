@@ -11,8 +11,8 @@ const Cart = () => {
     {addItemNavBar () === 0 ? (
     <div className='page'>
       <div className='page__in page__center'>
-        <h2 className='titulo22'>No hay elementos en tu carrito</h2>
-        <Link to='/' className='cart__btn'>Ir a la tienda</Link>
+        <h2 className='tituloCarrito'>No hay elementos en tu carrito</h2>
+        <Link to='/' className='cart__btn'>Volver a la tienda</Link>
       </div>
    </div>
 
@@ -24,7 +24,7 @@ const Cart = () => {
      <div className='page__in'>
 
        <div className='cart'>
-         <h2 className='titulo32'>Mi Carrito</h2>
+         <h2 className='tituloCarrito'>Mi Carrito</h2>
        </div>
 
        <div className='cart__table'>

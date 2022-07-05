@@ -15,6 +15,7 @@ const Hero = () => {
                     sentido de pertenencia, ya que para nosotros esto es mas que un box de entrenamiento.
                 </p>
                 <p>¡El primer paso lo das vos, el segundo lo damos juntos!</p>
+                <button class="button-tienda">Tienda</button>
             </div>
 
             <div class="video1">

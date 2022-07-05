@@ -22,9 +22,8 @@ const ItemDetail = ({item}) => {
       <img className="img-itemDetail" src={item.image} alt={item.id} />
       <p className="p-detail">{item.description}</p>
       <h5>{item.price}</h5>
-      <div>
-      {ocultarConfirmar ? (<Link to={"/carrito"}>Finalizar la compra</Link>) : (<ItemCount initial={0} onAdd={addToCart}/>)}
-      </div>
+      <ItemCount initial={0} onAdd={addToCart}/>
+      <Link to={"/carrito"}>Finalizar la compra</Link>
     </div>
 
   )

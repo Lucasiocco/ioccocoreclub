@@ -3,6 +3,9 @@ import ItemDetail from "./ItemDetail";
 import { productos } from "./productos";
 import { useParams } from "react-router-dom";
 import { SkeletonCard } from "./ProductLoader"
+import { db } from "../Firebase"
+import { getDoc, collection, doc } from "firebase/firestore";
+
 
 const ItemDetailContainer = () => {
   
@@ -13,16 +16,20 @@ const ItemDetailContainer = () => {
     useEffect(() => {
 
       setLoading(true)
+
+      const collectionProductos = collection(db,"productos");
+      const refDeldoc = doc(collectionProductos,id);
+      const consulta = getDoc(refDeldoc);
   
-      new Promise((res, rej) => {
-        setTimeout(() => {
-          res(productos.find(productos => productos.id == id))
-        }, )
+      consulta
+      .then(resultado => {
+        const producto = resultado.data();
+        setItem(producto);
+        setLoading(false);
+      } )
+      .catch((error) => {
+        console.log(error)
       })
-        .then(respuesta => {
-          setLoading(false)
-          setItem(respuesta)
-        })
   
     },[])
   
