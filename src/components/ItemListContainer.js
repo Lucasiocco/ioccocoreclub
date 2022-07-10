@@ -1,44 +1,36 @@
 import { useEffect, useState } from "react"
-import { productos } from "./productos"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
-import { ProductLoader } from "./ProductLoader"
-import { db } from "../Firebase"
-import { getDocs, collection } from "firebase/firestore"
+import { collectionProductos } from "../Firebase"
+import { getDocs, query, where } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
     const [ items , setItems] = useState([]);
-    const [loading, setLoading] = useState(true)
     const { category } = useParams();
-
-    const collectionProductos = collection(db,"productos");
 
     useEffect(() => {
     
-      const consulta = getDocs(collectionProductos);
+      const ref = category
+      ? query(collectionProductos, where("categoria", "==", category))
+      : collectionProductos;
 
-    consulta
-    .then((resultado) => {
-      const productos_mapeados = resultado.docs.map(referencia => {
-        const aux = referencia.data();
-        aux.id = referencia.id;
-        return aux;
-      })
-      setItems(productos_mapeados);
-      setLoading(false);
-
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      getDocs(ref).then((response) => {
+        const items = response.docs.map(doc => {
+          return {
+            id: doc.id,
+            ...doc.data()
+          }
+        });
+        setItems(items);
+      });
 
     }, [category])
 
   
     return (
       <>
-        {loading ? <ProductLoader /> : <ItemList items={items} />}
+      <ItemList items={items}/>
       </>
     )
   }

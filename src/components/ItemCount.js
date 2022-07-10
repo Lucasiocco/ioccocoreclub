@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import swal from 'sweetalert';
 
 const ItemCount = ({ stock, initial, onAdd }) => {

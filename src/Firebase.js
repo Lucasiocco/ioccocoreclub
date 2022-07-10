@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { productos } from "./components/productos";
 
 
 const firebaseConfig = {
@@ -13,3 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
+export const collectionProductos = collection(db, "productos");
+
+productos.map((producto) => addDoc(collectionProductos, producto));
