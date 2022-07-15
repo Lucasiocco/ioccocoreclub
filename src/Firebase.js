@@ -16,5 +16,3 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 export const collectionProductos = collection(db, "productos");
-
-productos.map((producto) => addDoc(collectionProductos, producto));

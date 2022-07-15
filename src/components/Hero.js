@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
                     sentido de pertenencia, ya que para nosotros esto es mas que un box de entrenamiento.
                 </p>
                 <p>¡El primer paso lo das vos, el segundo lo damos juntos!</p>
-                <button class="button-tienda">Tienda</button>
+                <NavLink to="/" class="button-tienda">Ir a la Tienda</NavLink>
             </div>
 
             <div class="video1">

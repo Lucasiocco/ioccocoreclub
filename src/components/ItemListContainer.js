@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     useEffect(() => {
 
       const ref = category
-      ? query(collectionProductos, where("categoria", "==", category))
+      ? query(collectionProductos, where("category", "==", category))
       : collectionProductos;
 
       getDocs(ref).then((response) => {
