@@ -11,9 +11,9 @@ const Main = () => {
   return (
     <main className="main">
     <Routes>
-        <Route path="/" element={<Hero />}></Route>
+        <Route path="/" element={<ItemListContainer />}></Route>
         <Route path="/nosotros" element={<Nosotros />}></Route>
-        <Route path="/categoria/:category" element={<ItemListContainer />} />
+        <Route path="/category/:category" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/Carrito" element={<Carrito/>}/>
         <Route path="/Checkout" element={<Checkout/>}/>

@@ -8,9 +8,9 @@ const ItemListContainer = () => {
 
     const [ items , setItems] = useState([]);
     const { category } = useParams();
-
-    useEffect(() => {
     
+    useEffect(() => {
+
       const ref = category
       ? query(collectionProductos, where("categoria", "==", category))
       : collectionProductos;

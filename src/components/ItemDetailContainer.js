@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { collectionProductos } from "../Firebase"
 import { getDoc, doc } from "firebase/firestore";
 
-
 const ItemDetailContainer = () => {
   
     const [item, setItem] = useState({});

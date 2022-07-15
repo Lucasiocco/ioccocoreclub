@@ -6,9 +6,10 @@ import { CartProvider } from './components/Provider';
 import { collectionProductos } from './Firebase';
 import { addDoc } from 'firebase/firestore';
 import { productos } from './components/productos';
-
+import { db } from './Firebase';
 
 //productos.map((producto) => addDoc(collectionProductos, producto));
+//console.log(db);
 
 const App = () => {
     return (
