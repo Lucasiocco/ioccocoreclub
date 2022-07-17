@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Form = ({ handleChange, data, handleSubmit}) => {
   return (
@@ -16,8 +17,8 @@ const Form = ({ handleChange, data, handleSubmit}) => {
             onChange={handleChange}
             value={data.phone}
             />
-            <button>Finalizar Compra</button>
         </form>
+        <Link to="/Checkout">Proceder con la compra</Link>
     </div>
   )
 }

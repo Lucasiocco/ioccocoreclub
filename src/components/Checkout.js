@@ -1,9 +1,43 @@
+import { db } from "../Firebase"
+import { collection , addDoc , serverTimestamp } from "firebase/firestore"
+import { useState } from "react"
 
 const Checkout = () => {
+
+  const [idCompra,setIdCompra] = useState("")
+
+  const handleBuy = () => {
+    
+    const collectionOrdenes = collection(db,"ordenes")
+
+    const orderData = {
+      buyer : {
+        name : "Horacio",
+        phone : "555555555",
+        email : "test@tes.com"
+      },
+      items : [{id:1,titulo:"test producto"}],
+      date : serverTimestamp(),
+      total : 100
+    }
+
+    const consulta = addDoc(collectionOrdenes,orderData)
+
+    consulta
+      .then(resultado=>{
+        setIdCompra(resultado.id)
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+
+
+  }
 
   return (
     <div className="checkout">
       <h2>CheckOut</h2>
+      {idCompra&&<p>Su compra es : {idCompra}</p>}
         <div className="checkout__right__bottom">
           <div className="checkout__right__bottom__item">
             <h3 className="checkout__right__bottom__item__title">Payment method</h3>
@@ -23,7 +57,7 @@ const Checkout = () => {
             </div>
           </div>
           <div className="checkout__right__bottom__item">
-            <button className="checkout__right__bottom__item__button">Pagar</button>
+            <button className="checkout__right__bottom__item__button" onClick={handleBuy}>Pagar</button>
           </div>
         </div>
       </div>

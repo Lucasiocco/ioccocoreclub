@@ -43,7 +43,7 @@ const Cart = () => {
   return (
   <>
 
-    {addItemNavBar () === 0 ? (
+    {addItemNavBar() === 0 ? (
     <div className='page'>
       <div className='page__in page__center'>
         <h2 className='tituloCarrito'>No hay elementos en tu carrito</h2>

@@ -9,13 +9,13 @@ export const CartProvider = ({children}) => {
 
 
 
- const addToCart = (item, quantity) => {
+ const addToCart = (item, cantidad) => {
     if (isInCart(item.id)) {
-        sumarCantidad(item.id, quantity)
+        sumarCantidad(item.id, cantidad)
     } else {
         setCartItems([...cartItems, {
             ...item,
-            cantidad: quantity
+            cantidad: cantidad
         }])
     }
  };
@@ -77,7 +77,9 @@ const getSubtotal = (price, cantidad) => {
         total = total + (producto.cantidad * producto.price)
     })
     return Number(total)
+    
 }
+
 
 return (
     <CartContext.Provider value={{cartItems, addToCart, addItemNavBar, isInCart, deleteItem, clear, getTotal, getSubtotal, cartLenght}}>

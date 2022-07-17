@@ -21,4 +21,4 @@ Se utilizo **Bootstrap** en el proyecto para facilitar la implementacion de un N
 
 ### Nuestras Redes
 
-[@TheCoreClub](https://www.instagram.com/)
+[@thecoreclub.ok](https://www.instagram.com/)

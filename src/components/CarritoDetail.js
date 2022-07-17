@@ -8,17 +8,17 @@ const CarritoDetail = () => {
 
   return (
     <div className="cart">
-    {cartItems.map((prod) => (
-        <div className="infoCart" key={prod.id}>
+    {cartItems.map((producto) => (
+        <div className="infoCart" key={producto.id}>
             <img
-                src={prod.img}
-                alt={prod.name}
+                src={producto.img}
+                alt={producto.name}
                 width="70px"
             />
-            <h2>{prod.name}</h2>
-            <h2>${prod.price}</h2>
-            <h2>Cantidad: {prod.cantidad}</h2>
-            <button onClick={() => deleteItem(prod.id)}>
+            <h2>{producto.name}</h2>
+            <h2>${producto.price}</h2>
+            <h2>Cantidad: {producto.cantidad}</h2>
+            <button onClick={() => deleteItem(producto.id)}>
                 Eliminar
             </button>
         </div>
