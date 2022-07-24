@@ -1,10 +1,12 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import swal from 'sweetalert';
+import { CartContext } from './Provider';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
 const resultado = useState(initial);
 const count = resultado[0];
 const setCount = resultado[1];
+const { addToCart } = useContext(CartContext);
 
 const aumentarContador = () => { 
     setCount(count + 1);
@@ -34,7 +36,9 @@ const confirmarContador = ()=>{
           text: 'Se han agregado: ' + count + ' productos a su carro',
           icon: 'success'
       })  
-  )}
+  )
+  addToCart(count);
+}
 
 
   return (
