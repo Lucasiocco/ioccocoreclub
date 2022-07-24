@@ -7,42 +7,55 @@ export const CartProvider = ({children}) => {
 
     const [cartItems, setCartItems] = useState ([])
 
+ const addItem = (item, quantity) => {
+    const newCartItems = [...cartItems];
+    const existingItem = newCartItems.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    }
+    else {
+        newCartItems.push({
+            ...item,
+            quantity
+        });
+    }
+    setCartItems(newCartItems);
+}
 
-
- const addToCart = (item, cantidad) => {
+ const addToCart = (item, quantity) => {
     if (isInCart(item.id)) {
-        sumarCantidad(item.id, cantidad)
+        sumarCantidad(item.id, quantity)
     } else {
         setCartItems([...cartItems, {
             ...item,
-            cantidad: cantidad
+            quantity: quantity
         }])
     }
  };
 
  const isInCart = (id) => cartItems.some((prod) => prod.id === id);
 
- const sumarCantidad = (item, cantidad) => {
-    const newProducts = cartItems.map((prod) => {
+ const sumarCantidad = (item, quantity) => {
+    const newProductos = cartItems.map((prod) => {
         if (prod.id === item.id) {
-            const newProduct = {
+            const newProducto = {
                 ...prod,
-                cantidad: prod.cantidad + cantidad,
+                quantity: prod.quantity + quantity,
             };
-            return newProduct;
+            return newProducto;
         } else {
             return prod;
         }
     });
-    setCartItems(newProducts);
+    setCartItems(newProductos);
 };
 
 const addItemNavBar = () => {
-    let cantidad = 0
+    let quantity = 0
     cartItems.forEach((producto) => {
-        cantidad = cantidad + producto.cantidad
+        quantity = quantity + producto.quantity
 })
-    return cantidad
+    return quantity
 }
 
 
@@ -56,17 +69,17 @@ const clear = () => {
 }
 
     const cartLenght = () => {
-        let cantidad = 0
+        let quantity = 0
         cartItems.forEach((producto) => {
-            cantidad = cantidad + producto.cantidad
+            quantity = quantity + producto.quantity
         })
-        return cantidad
+        return quantity
     }
 
 
-const getSubtotal = (price, cantidad) => {
+const getSubtotal = (price, quantity) => {
     let subtotal = 0
-    subtotal = subtotal + (price * cantidad)
+    subtotal = subtotal + (price * quantity)
     return Number(subtotal)
 }
 
@@ -74,7 +87,7 @@ const getSubtotal = (price, cantidad) => {
     const getTotal = () => {
     let total = 0
     cartItems.forEach((producto) => {
-        total = total + (producto.cantidad * producto.price)
+        total = total + (producto.quantity * producto.price)
     })
     return Number(total)
     
@@ -82,7 +95,7 @@ const getSubtotal = (price, cantidad) => {
 
 
 return (
-    <CartContext.Provider value={{cartItems, addToCart, addItemNavBar, isInCart, deleteItem, clear, getTotal, getSubtotal, cartLenght}}>
+    <CartContext.Provider value={{cartItems, addItem, addToCart, addItemNavBar, isInCart, deleteItem, clear, getTotal, getSubtotal, cartLenght}}>
         {children}
     </CartContext.Provider>
 )

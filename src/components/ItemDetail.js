@@ -4,14 +4,14 @@ import { useState, useContext } from 'react';
 import { CartContext } from './Provider';
 import { Link }from 'react-router-dom';
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({item, price, image, name, description}) => {
 
   const { addItem } = useContext(CartContext)
   const [ cant, setCant ] = useState(0)
 
   const onAdd = (quantity) => {
     setCant(quantity)
-    addItem ( item, quantity )
+    addItem ( item, quantity, price, image, name, description )
   }
 
   return (
@@ -27,7 +27,7 @@ const ItemDetail = ({item}) => {
   </div>
   <div class="count">
   <ItemCount initial={0} onAdd={onAdd}/>
-  <Link to={"/"}>Seguir Comprando</Link>
+  <Link to={"/"} className="volverTienda">Seguir Comprando</Link>
   </div>
 </div>
 

@@ -143,6 +143,9 @@ h4 {
     height: auto;
   }
   
+  .volverTienda{
+    align-self: flex-end;
+  }
 
 /* COUNT */
 
