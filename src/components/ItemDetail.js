@@ -16,17 +16,21 @@ const ItemDetail = ({item}) => {
 
   return (
 
-    <div className="item-detail">
-      <h4>{item.name}</h4>
-      <img className="img-itemDetail" src={item.image} alt={item.id} />
-      <p className="p-detail">{item.description}</p>
-      <h5>{item.price}</h5>
-      { cant === 0 ? ( 
-      <ItemCount initial={0} onAdd={onAdd}/>
-      ) : (
-      <Link to={"/carrito"}>Finalizar la compra</Link>
-      )}
-      </div>
+<div class="container">
+  <div class="img">
+  <img className="img-itemDetail" src={item.image} alt={item.id} />
+  </div>
+  <div class="descrip">
+  <h4>{item.name}</h4>
+  <p className="p-detail">{item.description}</p>
+  <h5>{item.price}</h5>
+  </div>
+  <div class="count">
+  <ItemCount initial={0} onAdd={onAdd}/>
+  <Link to={"/"}>Seguir Comprando</Link>
+  </div>
+</div>
+
   )
 }
 
