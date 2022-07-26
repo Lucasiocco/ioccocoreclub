@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import CarritoDetail from "./CarritoDetail"
 import Form from "./Form"
 import { CartContext } from "./Provider"
-import { addDoc, serverTimestamp, collection } from "firebase/firestore"
+import { collection , addDoc , serverTimestamp } from "firebase/firestore"
 import { db } from "../Firebase"
 
 
@@ -38,7 +38,6 @@ const Cart = () => {
   }
   )
   }
-
 
   return (
   <>

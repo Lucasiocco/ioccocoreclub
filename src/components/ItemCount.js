@@ -1,13 +1,13 @@
 import {useState, useContext} from 'react'
 import swal from 'sweetalert';
 import { CartContext } from './Provider';
-import { addToCart, addItem } from './Provider';
+import { addItem } from './Provider';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
 const resultado = useState(initial);
 const count = resultado[0];
 const setCount = resultado[1];
-const { addToCart, addItem } = useContext(CartContext);
+const { addItem } = useContext(CartContext);
 
 
 const aumentarContador = () => { 
@@ -39,7 +39,8 @@ const confirmarContador = ()=>{
           icon: 'success'
       })  
   )
-  addToCart(addItem, count);
+  onAdd(count);
+  
 }
 
 

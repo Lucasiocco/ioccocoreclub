@@ -1,10 +1,12 @@
 import { db } from "../Firebase"
 import { collection , addDoc , serverTimestamp } from "firebase/firestore"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CartContext } from "./Provider"
 
 const Checkout = () => {
-
+  
   const [idCompra,setIdCompra] = useState("")
+  const {cartItems, getTotal, addItemNavBar} = useContext(CartContext)
 
   const handleBuy = () => {
     
@@ -12,9 +14,9 @@ const Checkout = () => {
 
     const orderData = {
       buyer : {
-        name : "Horacio",
-        phone : "555555555",
-        email : "test@tes.com"
+        name : "",
+        phone : "",
+        email : ""
       },
       items : [{id:1,titulo:"test producto"}],
       date : serverTimestamp(),
@@ -63,7 +65,7 @@ const Checkout = () => {
       </div>
   );
 
-
+ 
 }    
 
 

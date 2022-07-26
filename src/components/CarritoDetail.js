@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 const CarritoDetail = () => {
 
-  const {cartItems, deleteItem, clear, getTotal} = useContext(CartContext)
+  const {cartItems, deleteItem, clear, getSubtotal, getTotalItems, getTotal} = useContext(CartContext)
 
   return (
     <div className="cart">
@@ -18,6 +18,7 @@ const CarritoDetail = () => {
             <h2>{producto.name}</h2>
             <h2>${producto.price}</h2>
             <h2>Cantidad: {producto.quantity}</h2>
+            <p>Subtotal: ${getSubtotal(producto.price, producto.quantity )}</p>
             <button onClick={() => deleteItem(producto.id)}>
                 Eliminar
             </button>

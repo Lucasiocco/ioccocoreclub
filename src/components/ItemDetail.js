@@ -2,17 +2,19 @@ import React from 'react';
 import ItemCount from './ItemCount';
 import { useState, useContext } from 'react';
 import { CartContext } from './Provider';
-import { Link }from 'react-router-dom';
+import { Link, useParams }from 'react-router-dom';
+import { useEffect } from 'react';
 
 const ItemDetail = ({item, price, image, name, description}) => {
 
   const { addItem } = useContext(CartContext)
-  const [ cant, setCant ] = useState(0)
+  const [ quantity, setQuantity ] = useState(0)
 
   const onAdd = (quantity) => {
-    setCant(quantity)
+    setQuantity(quantity)
     addItem ( item, quantity, price, image, name, description )
   }
+  
 
   return (
 
@@ -33,5 +35,6 @@ const ItemDetail = ({item, price, image, name, description}) => {
 
   )
 }
+
 
 export default ItemDetail
