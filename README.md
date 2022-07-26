@@ -13,6 +13,10 @@ Un proyecto en crecimiento, apuntado a la venta de servicios relacionados con el
 
 Se utilizo **Bootstrap** en el proyecto para facilitar la implementacion de un NavBar Responsive.
 
+## Video Demostrativo
+
+!(C:/Users/lucas/OneDrive/Escritorio/ioccocoreclub/public/img/videoDem)
+
 ## Links Utiles
 
 [ReactRouter](https://reactrouter.com/)
@@ -21,4 +25,4 @@ Se utilizo **Bootstrap** en el proyecto para facilitar la implementacion de un N
 
 ### Nuestras Redes
 
-[@thecoreclub.ok](https://www.instagram.com/)
+[@thecoreclub.ok](https://www.instagram.com/thecoreclub.ok/)
