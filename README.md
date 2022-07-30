@@ -13,9 +13,20 @@ Un proyecto en crecimiento, apuntado a la venta de servicios relacionados con el
 
 Se utilizo **Bootstrap** en el proyecto para facilitar la implementacion de un NavBar Responsive.
 
-## Video Demostrativo
+## Uso de la App
+Copiamos el link HTTPS desde Code en Github
+Descargamos el archivo zip, o en caso de tener Git instalado, haremos un Git clone. git clone https://github.com/ioccoCoreClub
+Desde la terminal nos paramos en la carpeta raiz del proyecto e instalamos todos las dependencias que están dentro con "npm i".
+Luego corremos el comando:
+### `npm start`
 
-!(C:/Users/lucas/OneDrive/Escritorio/ioccocoreclub/public/img/videoDem)
+iniciamos la App en el navegador con el link [http://localhost:3000] para su visualización.
+
+
+## Demo
+
+![demo](public/img/videoDem.gif)
+
 
 ## Links Utiles
 
