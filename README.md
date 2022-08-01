@@ -15,7 +15,7 @@ Se utilizo **Bootstrap** en el proyecto para facilitar la implementacion de un N
 
 ## Uso de la App
 Copiamos el link HTTPS desde Code en Github
-Descargamos el archivo zip, o en caso de tener Git instalado, haremos un Git clone. git clone https://github.com/ioccoCoreClub
+Descargamos el archivo zip, o en caso de tener Git instalado, haremos un Git clone. git clone https://github.com/ioccocoreclub
 Desde la terminal nos paramos en la carpeta raiz del proyecto e instalamos todos las dependencias que están dentro con "npm i".
 Luego corremos el comando:
 ### `npm start`

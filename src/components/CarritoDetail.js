@@ -7,6 +7,8 @@ const CarritoDetail = () => {
   const {cartItems, deleteItem, clear, getSubtotal, getTotalItems, getTotal} = useContext(CartContext)
 
   return (
+    <div className="carrito__detail">
+        <h2 className='carrito__detail__title'>Carrito</h2>
     <div className="cart">
     {cartItems.map((producto) => (
         <div className="infoCart" key={producto.id}>
@@ -24,11 +26,12 @@ const CarritoDetail = () => {
             </button>
         </div>
     ))}
+    </div>
     <div className="cartBtn">
         <h2>Total: ${getTotal()}</h2>
         <button onClick={clear}>Vaciar carrito</button>
     </div>
-</div>
+    </div>
   )
 }
 

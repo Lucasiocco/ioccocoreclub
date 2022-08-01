@@ -307,31 +307,49 @@ h4 {
 
 /* CARRITO */
 
-.page {
-    width: 100vw;
-    height: 100vh;   
-}
-
-.carritoCompra {
+.carrito__detail {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+}
+
+.carrito__detail__title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.infoCart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+    box-shadow: #000 1px 1px 4px;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.cartBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    min-width: 250px;
-    transition: all 0.3s ease;
-}
-
-.tituloCarrito{
-    font-family: 'Russo One', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-
-.cart__btn{
-    margin-left: 10px;
+    min-width: 200px;
+    max-width: 400px;
 }
 
 
@@ -357,3 +375,32 @@ h4 {
     color: black;
 }
 
+/* CHECKOUT */
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 500px;
+}
+
+.checkout h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* FORMULARIO */
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
