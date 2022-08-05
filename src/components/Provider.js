@@ -83,9 +83,10 @@ const getSubtotal = (price, quantity) => {
         return total
     }
 
+    const deleteAll = (_) => setCartItems([]);
 
 return (
-    <CartContext.Provider value={{cartItems, getTotalItems, addItem, addItemNavBar, isInCart, deleteItem, clear, getTotal, getSubtotal, cartLenght}}>
+    <CartContext.Provider value={{cartItems, getTotalItems, addItem, addItemNavBar, isInCart, deleteItem, clear, getTotal, getSubtotal, deleteAll, cartLenght}}>
         {children}
     </CartContext.Provider>
 )

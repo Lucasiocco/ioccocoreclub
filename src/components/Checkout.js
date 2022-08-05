@@ -2,44 +2,45 @@ import { db } from "../Firebase"
 import { collection , addDoc , serverTimestamp } from "firebase/firestore"
 import { useState, useContext } from "react"
 import { CartContext } from "./Provider"
+import Form from "./Form"
 
 const Checkout = () => {
   
-  const [idCompra,setIdCompra] = useState("")
-  const {cartItems, getTotal, addItemNavBar} = useContext(CartContext)
+  const [data, setData] = useState({name: '', email: '', phone: ''})
+  const [orderId, setOrderId] = useState('');
+  const {cartItems, getTotal, deleteAll} = useContext(CartContext)
 
-  const handleBuy = () => {
-    
-    const collectionOrdenes = collection(db,"ordenes")
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+        ...data,
+        [name]: value,
+    });
+};
 
-    const orderData = {
-      buyer : {
-        name : "",
-        phone : "",
-        email : ""
-      },
-      items : [{id:1,titulo:"test producto"}],
-      date : serverTimestamp(),
-      total : 100
-    }
+const handleSubmit = (e) => {
+    e.preventDefault();
+    const objOrden = {
+        buyer: {
+            name: data.name,
+            phone: data.phone,
+            email: data.email,
+        },
+        cartItems,
+        total: getTotal(),
+        date: serverTimestamp(),
+    };
 
-    const consulta = addDoc(collectionOrdenes,orderData)
-
-    consulta
-      .then(resultado=>{
-        setIdCompra(resultado.id)
-      })
-      .catch(error=>{
-        console.log(error)
-      })
-
-
-  }
+    const ref = collection(db, 'ordenes');
+    addDoc(ref, objOrden).then((response) => {
+        setOrderId(response.id);
+        deleteAll();
+    });
+}
 
   return (
     <div className="checkout">
       <h2>CheckOut</h2>
-      {idCompra&&<p>Su compra es : {idCompra}</p>}
         <div className="checkout__right__bottom">
           <div className="checkout__right__bottom__item">
             <h3 className="checkout__right__bottom__item__title">Payment method</h3>
@@ -58,10 +59,16 @@ const Checkout = () => {
               </div>
             </div>
           </div>
+          <Form
+      handleChange={handleChange}
+      data={data}
+      handleSubmit={handleSubmit}
+      />
           <div className="checkout__right__bottom__item">
-            <button className="checkout__right__bottom__item__button" onClick={handleBuy}>Pagar</button>
+            <button className="checkout__right__bottom__item__button" onClick={handleSubmit}>Pagar</button>
           </div>
         </div>
+      {orderId&&<p>Su orden de compra es : {orderId}</p>}
       </div>
   );
 
