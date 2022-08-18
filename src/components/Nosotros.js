@@ -3,7 +3,7 @@ import React from 'react'
 const Nosotros = () => {
   return (
     <div class="paginaNosotros">
-        <h1 className="bienvenida">¡Nuestros Profesionales!</h1>
+        <h1 className="bienvenida">¡Nuestros Coachs!</h1>
         <div class="containerNos">
             <div class="profe1">
                 <div class="flip-card">

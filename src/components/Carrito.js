@@ -24,7 +24,7 @@ const Cart = () => {
 ) : (
   <div className='page'>
     <CarritoDetail/>
-    <Link to="/Checkout">Proceder con la compra</Link>
+    <Link to="/Checkout" className="procederCompra">Proceder con la compra</Link>
   </div>
 
 )}

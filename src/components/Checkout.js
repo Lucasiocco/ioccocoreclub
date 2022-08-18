@@ -57,6 +57,12 @@ const handleSubmit = (e) => {
                   <img src="../img/visa.png" alt="visa" />
                 </label>
               </div>
+              <div className="checkout__right__bottom__item__method__item">
+                <input type="radio" name="payment" id="payment3" />
+                <label htmlFor="payment3">
+                  <img src="../img/paypal.png" alt="paypal" />
+                </label>
+              </div>
             </div>
           </div>
           <Form
@@ -65,7 +71,7 @@ const handleSubmit = (e) => {
       handleSubmit={handleSubmit}
       />
           <div className="checkout__right__bottom__item">
-            <button className="checkout__right__bottom__item__button" onClick={handleSubmit}>Pagar</button>
+            <button className="btn btn-primary" onClick={handleSubmit}>Pagar</button>
           </div>
         </div>
       {orderId&&<p>Su orden de compra es : {orderId}</p>}

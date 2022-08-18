@@ -15,13 +15,13 @@ const CarritoDetail = () => {
             <img
                 src={producto.image}
                 alt={producto.name}
-                width="70px"
+                width="150px"
             />
             <h2>{producto.name}</h2>
             <h2>${producto.price}</h2>
-            <h2>Cantidad: {producto.quantity}</h2>
+            <h5>Cantidad: {producto.quantity}</h5>
             <p>Subtotal: ${getSubtotal(producto.price, producto.quantity )}</p>
-            <button onClick={() => deleteItem(producto.id)}>
+            <button className='btn btn-primary' onClick={() => deleteItem(producto.id)}>
                 Eliminar
             </button>
         </div>
@@ -29,7 +29,7 @@ const CarritoDetail = () => {
     </div>
     <div className="cartBtn">
         <h2>Total: ${getTotal()}</h2>
-        <button onClick={clear}>Vaciar carrito</button>
+        <button className='btn btn-primary' onClick={clear}>Vaciar carrito</button>
     </div>
     </div>
   )
