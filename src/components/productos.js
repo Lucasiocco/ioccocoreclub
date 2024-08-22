@@ -5,7 +5,7 @@ export const productos = [
     price: 4500,
     stock: 50,
     category: 'Planes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'Plan de entrenamiento X3 clases presenciales. Incluye rutina de musculacion + videos instructivos + tips de alimentacion para potenciar tu desarrollo al maximo.'
   },
   {
     name: 'Plan X2',
@@ -13,7 +13,7 @@ export const productos = [
     price: 3500,
     stock: 50,
     category: 'Planes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'Plan de entrenamiento X2 clases presenciales. Incluye rutina de musculacion + videos instructivos + tips de alimentacion para potenciar tu desarrollo al maximo.'
   },
   {
     name: 'Plan ON',
@@ -21,7 +21,7 @@ export const productos = [
     price: 2500,
     stock: 50,
     category: 'Planes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'Plan de seguimiento online. Incluye rutina de musculacion + videos instructivos + tips de alimentacion para potenciar tu desarrollo al maximo.'
   },
   {
     name: 'Proteina',

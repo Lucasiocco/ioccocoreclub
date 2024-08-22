@@ -38,7 +38,7 @@ const Nosotros = () => {
                             <div class="flip-card-text">
                             <p>Profesor Nacional de Edudacion Fisica.</p>
                             <p>Preparador Fisico.</p>
-                            <p>Coach en "Mega Gimnasio Devoto.</p>
+                            <p>Coach en "Mega Gimnasio Devoto".</p>
                             <p>Jugador de futsal en "Villa Mitre".</p>
                             </div>
                         </div>

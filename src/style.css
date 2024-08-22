@@ -65,13 +65,13 @@ h4 {
 .dropdown-menu {
     min-width: 6rem;
     border: none;
+    border-radius: 0%;
 }
 
 .dropdown-menu.show{
     background-color: #212529;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -146,7 +146,7 @@ h4 {
   .count { grid-area: count; }
 
   .img-detail {
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   
@@ -169,6 +169,7 @@ h4 {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
+    margin: 0 10px;
 }
 
 .img-itemDetail {
@@ -185,6 +186,12 @@ h4 {
     margin-top: 150px;
     text-align: center;
 }
+.bienvenida2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    margin-top: 50px;
+    text-align: center;
+}
 
 .sec1 {
     display: flex;
@@ -194,7 +201,7 @@ h4 {
 
 .texto1 {
     font-family: 'Space Mono', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 100px;
 }
 
@@ -368,6 +375,11 @@ h4 {
     margin-top: 50px;
 }
 
+.page__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* BOTON HERO */
 
@@ -448,7 +460,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 

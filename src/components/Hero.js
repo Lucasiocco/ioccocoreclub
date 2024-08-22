@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom'
 const Hero = () => {
   return (
     <div class="heroSection">
-<h1 class="bienvenida">¡Te damos la Bienvenida!</h1>
+<h1 class="bienvenida">Te damos la Bienvenida</h1>
+<h1 class="bienvenida2">"Al Club"</h1>
         <section class="sec1">
             <div class="texto1">
                 <p>

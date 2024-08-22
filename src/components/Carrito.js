@@ -16,6 +16,7 @@ const Cart = () => {
     {addItemNavBar() === 0 ? (
     <div className='page'>
       <div className='page__in page__center'>
+        <h2 className='carrito__detail__title'>Carrito</h2>
         <h2 className='tituloCarrito'>No hay elementos en tu carrito</h2>
         <Link to='/' className='cart__btn'>Volver a la tienda</Link>
       </div>
